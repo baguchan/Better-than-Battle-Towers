@@ -2,9 +2,7 @@ package jamdoggie.betterbattletowers.entity.render;
 
 import jamdoggie.betterbattletowers.entity.EntityGolem;
 import net.minecraft.client.render.entity.MobRenderer;
-import net.minecraft.client.render.entity.PlayerRenderer;
 import net.minecraft.client.render.model.ModelBiped;
-import net.minecraft.core.entity.EntityLiving;
 import org.lwjgl.opengl.GL11;
 
 public class RenderGolem extends MobRenderer<EntityGolem>

@@ -1,8 +1,6 @@
 package jamdoggie.betterbattletowers.mixins;
 
 import jamdoggie.betterbattletowers.BetterBattleTowers;
-import net.minecraft.client.world.chunk.provider.ChunkProviderStatic;
-import net.minecraft.core.world.World;
 import net.minecraft.core.world.chunk.provider.IChunkProvider;
 import net.minecraft.server.world.WorldServer;
 import net.minecraft.server.world.chunk.provider.ChunkProviderServer;

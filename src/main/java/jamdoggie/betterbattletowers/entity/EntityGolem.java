@@ -7,6 +7,7 @@ import net.minecraft.core.entity.Entity;
 import net.minecraft.core.entity.monster.EntityMonster;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.Item;
+import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.sound.SoundCategory;
 import net.minecraft.core.util.helper.DamageType;
 import net.minecraft.core.util.helper.MathHelper;
@@ -22,7 +23,7 @@ public class EntityGolem extends EntityMonster
 	{
 		super(world);
 		this.scoreValue = 10000;
-		texture = "/mob/golem/golemdormant.png";
+		texture = "/entity/golem/golemdormant.png";
 		moveSpeed = 0.35F;
 		attackStrength = 8;
 		setSize(1.6F, 3.4F);
@@ -39,7 +40,7 @@ public class EntityGolem extends EntityMonster
 	{
 		super(world);
 		this.scoreValue = 10000;
-		texture = "/mob/golem/golem.png";
+		texture = "/entity/golem/golem.png";
 		moveSpeed = 0.35F;
 		attackStrength = 8;
 		setSize(1.6F, 3.4F);
@@ -127,7 +128,7 @@ public class EntityGolem extends EntityMonster
 				dormant = 0;
 				world.playSoundEffect(null, SoundCategory.CAVE_SOUNDS, x, y, z, "ambient.cave.cave", 0.7F, 1.0F);
 				world.playSoundAtEntity(null, this, BetterBattleTowers.MOD_ID + ".golemawaken", getSoundVolume() * 2.0F, ((random.nextFloat() - random.nextFloat()) * 0.2F + 1.0F) * 1.8F);
-				texture = "/mob/golem/golem.png";
+				texture = "/entity/golem/golem.png";
 				pathToEntity = 175;
 			}
 		}
@@ -224,10 +225,10 @@ public class EntityGolem extends EntityMonster
 		moveSpeed = 0.35F + (float)((double)(450 - getHealth()) / 1750D);
 		if(dormant == 1)
 		{
-			texture = "/mob/golem/golemdormant.png";
+			texture = "/entity/golem/golemdormant.png";
 		} else
 		{
-			texture = "/mob/golem/golem.png";
+			texture = "/entity/golem/golem.png";
 		}
 		attackStrength = 8;
 	}
@@ -301,11 +302,9 @@ public class EntityGolem extends EntityMonster
 	}
 
 	@Override
-	protected int getDropItemId()
-	{
-		return Item.brickClay.id;
+	protected void dropFewItems() {
+		this.spawnAtLocation(new ItemStack(Item.brickClay, 1, 0), 0.0f);
 	}
-
 	private int dormant;
 	private int pathToEntity;
 	private int growl;

@@ -42,7 +42,7 @@ public class BetterBattleTowers implements ModInitializer, GameStartEntrypoint, 
 		towercount = 200;
 		rarity = 3;
 
-		EntityHelper.Core.createEntity(EntityGolem.class, 101, "TowerGolem");
+		EntityHelper.createEntity(EntityGolem.class, 101, "TowerGolem", RenderGolem::new);
 
 
     }
@@ -69,17 +69,21 @@ public class BetterBattleTowers implements ModInitializer, GameStartEntrypoint, 
 	}
 
 	@Override
+	public void initNamespaces() {
+
+	}
+
+	@Override
 	public void onInitializeClient()
 	{
-		EntityHelper.Client.assignEntityRenderer(EntityGolem.class, new RenderGolem());
-		SoundHelper.Client.addSound(BetterBattleTowers.MOD_ID, "golem1.ogg");
-		SoundHelper.Client.addSound(BetterBattleTowers.MOD_ID, "golem3.ogg");
-		SoundHelper.Client.addSound(BetterBattleTowers.MOD_ID, "golemawaken.ogg");
-		SoundHelper.Client.addSound(BetterBattleTowers.MOD_ID, "golemdeath.ogg");
-		SoundHelper.Client.addSound(BetterBattleTowers.MOD_ID, "golemhurt2.ogg");
-		SoundHelper.Client.addSound(BetterBattleTowers.MOD_ID, "golemhurt3.ogg");
-		SoundHelper.Client.addSound(BetterBattleTowers.MOD_ID, "golemspecial1.ogg");
-		SoundHelper.Client.addSound(BetterBattleTowers.MOD_ID, "golemspecial2.ogg");
+		SoundHelper.addSound(BetterBattleTowers.MOD_ID, "golem1.ogg");
+		SoundHelper.addSound(BetterBattleTowers.MOD_ID, "golem3.ogg");
+		SoundHelper.addSound(BetterBattleTowers.MOD_ID, "golemawaken.ogg");
+		SoundHelper.addSound(BetterBattleTowers.MOD_ID, "golemdeath.ogg");
+		SoundHelper.addSound(BetterBattleTowers.MOD_ID, "golemhurt2.ogg");
+		SoundHelper.addSound(BetterBattleTowers.MOD_ID, "golemhurt3.ogg");
+		SoundHelper.addSound(BetterBattleTowers.MOD_ID, "golemspecial1.ogg");
+		SoundHelper.addSound(BetterBattleTowers.MOD_ID, "golemspecial2.ogg");
 	}
 
 	public void GenerateSurface(World world, Random random, int chunkX, int chunkZ)
