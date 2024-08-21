@@ -49,11 +49,12 @@ public class BetterBattleTowers implements ModInitializer, GameStartEntrypoint, 
 
 	@Override
 	public void beforeGameStart() {
+
 	}
 
 	@Override
 	public void beforeClientStart() {
-		MobInfoRegistry.register(EntityGolem.class, "betterbattletowers.golem.name", "betterbattletowers.golem.desc", 300, 10000, new MobInfoRegistry.MobDrop[]{new MobInfoRegistry.MobDrop(new ItemStack(Item.diamond), 1.0f, 1 ,1)});
+
 	}
 
 	@Override
@@ -62,6 +63,7 @@ public class BetterBattleTowers implements ModInitializer, GameStartEntrypoint, 
 
 	@Override
 	public void afterGameStart() {
+		MobInfoRegistry.register(EntityGolem.class, "betterbattletowers.golem.name", "betterbattletowers.golem.desc", 300, 10000, new MobInfoRegistry.MobDrop[]{new MobInfoRegistry.MobDrop(new ItemStack(Item.diamond), 1.0f, 1 ,1)});
 	}
 
 	@Override
