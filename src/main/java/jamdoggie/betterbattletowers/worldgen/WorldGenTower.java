@@ -350,7 +350,7 @@ public class WorldGenTower extends WorldFeature
 
 			for(int k3 = 0; k3 < 2; k3++)
 			{
-				world.setBlockWithNotify(l - k3, k2 + 7, j1 - 3, Block.chestLegacy.id);
+				world.setBlockWithNotify(l - k3, k2 + 7, j1 - 3, Block.chestPlanksOak.id);
 				TileEntityChest tileEntityChest = (TileEntityChest)world.getBlockTileEntity(l - k3, k2 + 7, j1 - 3);
 				for(int j5 = 0; j5 < 1 + k3 + l2; j5++)
 				{
@@ -466,7 +466,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.foodBread, 1);
+				return new ItemStack(Item.foodBread, random.nextInt(3));
 			}
 			if(j == 2)
 			{
@@ -535,11 +535,11 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.toolFirestrikerSteel, 1);
+				return new ItemStack(Item.toolFirestriker, 1);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(Block.glowstone, random.nextInt(3) + 5);
+				return new ItemStack(Item.dustRedstone, random.nextInt(3) + 5);
 			}
 			if(j == 3)
 			{
