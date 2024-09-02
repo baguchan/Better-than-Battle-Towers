@@ -16,9 +16,11 @@ import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.EntityHelper;
 import turniplabs.halplibe.helper.SoundHelper;
 import turniplabs.halplibe.util.ClientStartEntrypoint;
+import turniplabs.halplibe.util.ConfigHandler;
 import turniplabs.halplibe.util.GameStartEntrypoint;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 
+import java.util.Properties;
 import java.util.Random;
 
 
@@ -26,25 +28,37 @@ public class BetterBattleTowers implements ModInitializer, GameStartEntrypoint, 
 {
     public static final String MOD_ID = "betterbattletowers";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static ConfigHandler config;
 
+	static {
+		Properties prop = new Properties();
+		prop.setProperty("towercount", "200");
+		prop.setProperty("rarity", "3");
+		prop.setProperty("starting_entity_id", "101");
+		config = new ConfigHandler(BetterBattleTowers.MOD_ID, prop);
+		entityID = config.getInt("starting_entity_id");
+		towercount = config.getInt("towercount");
+		rarity = config.getInt("rarity");
+		config.updateConfig();
+	}
 	public static BetterBattleTowers instance;
 
-	private int towercount;
+	public static int towercount;
 	public static int rarity;
-	private final int DEFAULT_RARITY = 12;
+	private final int DEFAULT_RARITY = 3;
 
 	public BetterBattleTowers()
 	{
 		instance = this;
 	}
 
+	public static int entityID;
+
 	@Override
     public void onInitialize() {
         LOGGER.info("Better than Battle Towers initialized.");
-		towercount = 200;
-		rarity = 3;
 
-		EntityHelper.createEntity(EntityGolem.class, 101, "TowerGolem", RenderGolem::new);
+		EntityHelper.createEntity(EntityGolem.class, entityID, "TowerGolem", RenderGolem::new);
 
 
     }
