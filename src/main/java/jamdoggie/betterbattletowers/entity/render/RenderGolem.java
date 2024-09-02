@@ -20,10 +20,10 @@ public class RenderGolem extends MobRenderer<EntityGolem>
 	}
 
 	@Override
-	public void doRender(Tessellator tessellator, EntityGolem entity, double x, double y, double z, float yaw, float partialTick) {
+	public void doRenderPreview(Tessellator tessellator, EntityGolem entity, double x, double y, double z, float yaw, float partialTick) {
 		GL11.glPushMatrix();
 		GL11.glTranslatef(0,-2,0);
-		super.doRender(tessellator, entity, x, y, z, yaw, partialTick);
+		super.doRenderPreview(tessellator, entity, x, y, z, yaw, partialTick);
 		GL11.glPopMatrix();
 	}
 
