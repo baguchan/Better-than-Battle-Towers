@@ -27,8 +27,12 @@ public class WorldGenTower extends WorldFeature
 	public boolean generate(World world, Random random, int i, int j, int k)
 	{
 		boolean flag = false;
+		if (world.getBlockId(i, j, k) == Block.fluidWaterStill.id) {
+			return false;
+		}
+
 		int l = i;
-		int i1 = j - 1;
+		int i1 = j;
 		int j1 = k;
 		Biome biome = world.getBlockBiome(l, i1, j1);
 
@@ -273,10 +277,10 @@ public class WorldGenTower extends WorldFeature
 			{
 				world.setBlockWithNotify(l + 2, k2 + 6, j1 + 2, Block.mobspawner.id);
 				TileEntityMobSpawner tileentitymobspawner = (TileEntityMobSpawner)world.getBlockTileEntity(l + 2, k2 + 6, j1 + 2);
-				tileentitymobspawner.setMobId(getRandomSpawnerMob(random));
+				tileentitymobspawner.setMobId(getRandomSpawnerMob(biome, random));
 				world.setBlockWithNotify(l - 3, k2 + 6, j1 + 2, Block.mobspawner.id);
 				TileEntityMobSpawner tileentitymobspawner1 = (TileEntityMobSpawner)world.getBlockTileEntity(l - 3, k2 + 6, j1 + 2);
-				tileentitymobspawner1.setMobId(getRandomSpawnerMob(random));
+				tileentitymobspawner1.setMobId(getRandomSpawnerMob(biome, random));
 			}
 
 			world.setBlock(l, k2 + 6, j1 - 3, Block.stonePolished.id);
@@ -563,7 +567,7 @@ public class WorldGenTower extends WorldFeature
 		}
 	}
 
-	private String getRandomSpawnerMob(Random random)
+	private String getRandomSpawnerMob(Biome biome, Random random)
 	{
 		int i = random.nextInt(5);
 
@@ -594,6 +598,22 @@ public class WorldGenTower extends WorldFeature
 
 	private int getRandomCobbledBlock(Biome biome, int i, Random random)
 	{
+		if (biome.hasSurfaceSnow()) {
+			if (i % 2 == 0) {
+				return Block.brickPermafrost.id;
+			} else {
+				return Block.cobblePermafrost.id;
+			}
+		}
+
+		if (biome == Biomes.OVERWORLD_DESERT) {
+			if (i % 2 == 0) {
+				return Block.brickSandstone.id;
+			} else {
+				return Block.sandstone.id;
+			}
+		}
+
 		if(i == 0)
 		{
 			return Block.cobbleStone.id;
@@ -654,25 +674,8 @@ public class WorldGenTower extends WorldFeature
 		{
 			return Block.brickGranite.id;
 		}
-		if (biome.hasSurfaceSnow()) {
-			if (i % 2 == 0) {
-				return Block.brickPermafrost.id;
-			} else {
-				return Block.cobblePermafrost.id;
-			}
-		}
-
-		if (biome == Biomes.OVERWORLD_DESERT)
-		{
-			if (i % 2 == 0) {
-				return Block.brickSandstone.id;
-			} else {
-				return Block.sandstone.id;
-			}
-		}
 
 		return Block.cobbleStoneMossy.id;
-
 	}
 	private int currentFloor;
 	private int field_22237_field_20341_topFloor;
