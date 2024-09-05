@@ -9,6 +9,8 @@ import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.util.helper.Direction;
 import net.minecraft.core.world.World;
+import net.minecraft.core.world.biome.Biome;
+import net.minecraft.core.world.biome.Biomes;
 import net.minecraft.core.world.generate.feature.WorldFeature;
 import net.minecraft.core.world.type.WorldTypeOverworldExtended;
 
@@ -25,84 +27,16 @@ public class WorldGenTower extends WorldFeature
 	public boolean generate(World world, Random random, int i, int j, int k)
 	{
 		boolean flag = false;
-		int l = 0;
-		int i1 = 0;
-		int j1 = 0;
-		boolean flag1 = false;
-
-		for(int k1 = 0; k1 < 32; k1++)
-		{
-			int l1 = (i + random.nextInt(8)) - random.nextInt(8);
-			int i2 = (j + random.nextInt(4)) - random.nextInt(4);
-			int j2 = (k + random.nextInt(8)) - random.nextInt(8);
-
-			l = l1;
-			i1 = i2;
-			j1 = j2;
-			boolean flag5 = false;
-
-			if(world.getBlockId(l1, i2, j2) != 0 && world.getBlockId(l1, i2, j2) != Block.sand.id || world.getBlockId(l1, i2 - 1, j2) == 0)
-			{
-				continue;
-			}
-
-			int i3 = -4;
-
-			do
-			{
-				if(i3 >= 5)
-				{
-					break;
-				}
-				int i4 = -4;
-				do
-				{
-					if(i4 >= 5)
-					{
-						break;
-					}
-					int l4 = world.getBlockId(l1 + i3, i2, j2 + i4);
-					if(l4 != 0 && l4 != Block.layerSnow.id && l4 != Block.flowerYellow.id && l4 != Block.flowerRed.id && l4 != Block.flowerPurple.id) // TODO: investigate this. The original source accessed blocksList[], and I removed one that I thought was supposed to point towards logs.
-					{
-						flag5 = true;
-					}
-					int l5 = world.getBlockId(l1 + i3, i2 - 1, j2 + i4);
-					if(l5 != Block.grass.id && l5 != Block.grassRetro.id && l5 != Block.sand.id && l5 != Block.stone.id && l5 != Block.granite.id && l5 != Block.dirtScorched.id && l5 != Block.dirtScorchedRich.id &&  l5 != Block.grassScorched.id && l5 != Block.mudBaked.id && l5 != Block.blockSnow.id)
-					{
-						flag5 = true;
-					}
-					if(flag5)
-					{
-						break;
-					}
-					i4++;
-				} while(true);
-				if(flag5)
-				{
-					break;
-				}
-				i3++;
-			}
-			while(true);
-
-			if(flag5)
-			{
-				continue;
-			}
-			flag1 = true;
-			break;
-		}
-
-		if(!flag1)
-		{
-			return false;
-		}
+		int l = i;
+		int i1 = j - 1;
+		int j1 = k;
+		Biome biome = world.getBlockBiome(l, i1, j1);
 
 		boolean flag2 = false;
 		boolean flag3 = false;
 		boolean flag4 = false;
 		int k2 = i1 - 6;
-		int l2 = random.nextInt(16);
+		int l2 = random.nextInt(12);
 
 		currentFloor = 1;
 		field_22237_field_20341_topFloor = 0;
@@ -134,7 +68,7 @@ public class WorldGenTower extends WorldFeature
 						{
 							if(j4 > -5 && j4 < 4)
 							{
-								world.setBlock(i6, k6, l6, getRandomCobbledBlock(l2, random));
+								world.setBlock(i6, k6, l6, getRandomCobbledBlock(biome, l2, random));
 							}
 							continue;
 						}
@@ -143,7 +77,7 @@ public class WorldGenTower extends WorldFeature
 						{
 							if(j4 == -5 || j4 == 4)
 							{
-								world.setBlock(i6, k6, l6, getRandomCobbledBlock(l2, random));
+								world.setBlock(i6, k6, l6, getRandomCobbledBlock(biome, l2, random));
 								continue;
 							}
 
@@ -160,7 +94,7 @@ public class WorldGenTower extends WorldFeature
 
 									if(j3 == 6 && field_22237_field_20341_topFloor == 1)
 									{
-										world.setBlock(i6, k6, l6, getRandomCobbledBlock(l2, random));
+										world.setBlock(i6, k6, l6, getRandomCobbledBlock(biome, l2, random));
 									}
 
 									continue;
@@ -187,7 +121,7 @@ public class WorldGenTower extends WorldFeature
 								}
 								else
 								{
-									world.setBlock(i6, k6, l6, getRandomCobbledBlock(l2, random));
+									world.setBlock(i6, k6, l6, getRandomCobbledBlock(biome, l2, random));
 								}
 							}
 							else
@@ -201,7 +135,7 @@ public class WorldGenTower extends WorldFeature
 						{
 							if(j4 == -6 || j4 == 5)
 							{
-								world.setBlock(i6, k6, l6, getRandomCobbledBlock(l2, random));
+								world.setBlock(i6, k6, l6, getRandomCobbledBlock(biome, l2, random));
 								continue;
 							}
 
@@ -230,7 +164,7 @@ public class WorldGenTower extends WorldFeature
 							{
 								if(j3 < 0 || j3 > 3 || j4 != -7 && j4 != 6 || i5 != -1 && i5 != 0)
 								{
-									world.setBlock(i6, k6, l6, getRandomCobbledBlock(l2, random));
+									world.setBlock(i6, k6, l6, getRandomCobbledBlock(biome, l2, random));
 								}
 								else
 								{
@@ -261,7 +195,7 @@ public class WorldGenTower extends WorldFeature
 						{
 							if(j4 == -5 || j4 == 4)
 							{
-								world.setBlock(i6, k6, l6, getRandomCobbledBlock(l2, random));
+								world.setBlock(i6, k6, l6, getRandomCobbledBlock(biome, l2, random));
 								continue;
 							}
 							if(j4 <= -5 || j4 >= 4)
@@ -282,7 +216,7 @@ public class WorldGenTower extends WorldFeature
 						{
 							if(j4 == -4 || j4 == -3 || j4 == 2 || j4 == 3)
 							{
-								world.setBlock(i6, k6, l6, getRandomCobbledBlock(l2, random));
+								world.setBlock(i6, k6, l6, getRandomCobbledBlock(biome, l2, random));
 								continue;
 							}
 							if(j4 <= -3 || j4 >= 2)
@@ -294,7 +228,7 @@ public class WorldGenTower extends WorldFeature
 								world.setBlock(i6, k6, l6, Block.stonePolished.id);
 							} else
 							{
-								world.setBlock(i6, k6, l6, getRandomCobbledBlock(l2, random));
+								world.setBlock(i6, k6, l6, getRandomCobbledBlock(biome, l2, random));
 							}
 							continue;
 						}
@@ -306,11 +240,11 @@ public class WorldGenTower extends WorldFeature
 
 						if(j3 < 0 || j3 > 3 || j4 != -1 && j4 != 0)
 						{
-							world.setBlock(i6, k6, l6, getRandomCobbledBlock(l2, random));
+							world.setBlock(i6, k6, l6, getRandomCobbledBlock(biome, l2, random));
 						}
 						else
 						{
-							world.setBlock(i6, k6, l6, getRandomCobbledBlock(l2, random));
+							world.setBlock(i6, k6, l6, getRandomCobbledBlock(biome, l2, random));
 						}
 					}
 
@@ -320,8 +254,8 @@ public class WorldGenTower extends WorldFeature
 
 			if(currentFloor == 2)
 			{
-				world.setBlock(l + 3, k2, j1 - 5, getRandomCobbledBlock(l2, random));
-				world.setBlock(l + 3, k2 - 1, j1 - 5, getRandomCobbledBlock(l2, random));
+				world.setBlock(l + 3, k2, j1 - 5, getRandomCobbledBlock(biome, l2, random));
+				world.setBlock(l + 3, k2 - 1, j1 - 5, getRandomCobbledBlock(biome, l2, random));
 			}
 
 			if(field_22237_field_20341_topFloor == 1)
@@ -658,7 +592,7 @@ public class WorldGenTower extends WorldFeature
 		}
 	}
 
-	private int getRandomCobbledBlock(int i, Random random)
+	private int getRandomCobbledBlock(Biome biome, int i, Random random)
 	{
 		if(i == 0)
 		{
@@ -720,25 +654,25 @@ public class WorldGenTower extends WorldFeature
 		{
 			return Block.brickGranite.id;
 		}
-		if(i == 12)
-		{
-			return Block.cobblePermafrost.id;
+		if (biome.hasSurfaceSnow()) {
+			if (i % 2 == 0) {
+				return Block.brickPermafrost.id;
+			} else {
+				return Block.cobblePermafrost.id;
+			}
 		}
-		if(i == 13)
+
+		if (biome == Biomes.OVERWORLD_DESERT)
 		{
-			return Block.brickPermafrost.id;
+			if (i % 2 == 0) {
+				return Block.brickSandstone.id;
+			} else {
+				return Block.sandstone.id;
+			}
 		}
-		if(i == 14)
-		{
-			return Block.sandstone.id;
-		}
-		if(i == 15)
-		{
-			return Block.brickSandstone.id;
-		} else
-		{
-			return Block.cobbleStoneMossy.id;
-		}
+
+		return Block.cobbleStoneMossy.id;
+
 	}
 	private int currentFloor;
 	private int field_22237_field_20341_topFloor;
