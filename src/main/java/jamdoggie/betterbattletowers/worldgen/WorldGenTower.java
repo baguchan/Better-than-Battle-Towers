@@ -31,6 +31,10 @@ public class WorldGenTower extends WorldFeature
 			return false;
 		}
 
+		if (world.getBlockId(i, j, k) == 0) {
+			return false;
+		}
+
 		int l = i;
 		int i1 = j;
 		int j1 = k;
@@ -40,7 +44,7 @@ public class WorldGenTower extends WorldFeature
 		boolean flag3 = false;
 		boolean flag4 = false;
 		int k2 = i1 - 6;
-		int l2 = random.nextInt(12);
+		int l2 = random.nextInt(11);
 
 		currentFloor = 1;
 		field_22237_field_20341_topFloor = 0;
@@ -614,6 +618,27 @@ public class WorldGenTower extends WorldFeature
 			}
 		}
 
+		if (biome == Biomes.OVERWORLD_BIRCH_FOREST) {
+			if (i % 2 == 0) {
+				if (random.nextInt(3) == 0) {
+					return Block.brickStonePolished.id;
+				} else {
+					return Block.brickStonePolishedMossy.id;
+				}
+			}
+			return Block.brickStonePolished.id;
+		}
+		if (biome == Biomes.OVERWORLD_FOREST) {
+			if (i % 2 == 0) {
+				if (random.nextInt(3) == 0) {
+					return Block.cobbleStone.id;
+				} else {
+					return Block.cobbleStoneMossy.id;
+				}
+			}
+			return Block.cobbleStoneMossy.id;
+		}
+
 		if(i == 0)
 		{
 			return Block.cobbleStone.id;
@@ -638,44 +663,34 @@ public class WorldGenTower extends WorldFeature
 		}
 		if(i == 4)
 		{
-			if(random.nextInt(3) == 0)
-			{
-				return Block.brickStonePolished.id;
-			} else
-			{
-				return Block.brickStonePolishedMossy.id;
-			}
-		}
-		if(i == 5)
-		{
 			return Block.brickStonePolishedMossy.id;
 		}
-		if(i == 6)
+		if (i == 5)
 		{
 			return Block.cobbleBasalt.id;
 		}
-		if(i == 7)
+		if (i == 6)
 		{
 			return Block.brickBasalt.id;
 		}
-		if(i == 8)
+		if (i == 7)
 		{
 			return Block.cobbleLimestone.id;
 		}
-		if(i == 9)
+		if (i == 8)
 		{
 			return Block.brickLimestone.id;
 		}
-		if(i == 10)
+		if (i == 9)
 		{
 			return Block.cobbleGranite.id;
 		}
-		if(i == 11)
+		if (i == 10)
 		{
 			return Block.brickGranite.id;
 		}
 
-		return Block.cobbleStoneMossy.id;
+		return Block.cobbleStone.id;
 	}
 	private int currentFloor;
 	private int field_22237_field_20341_topFloor;
