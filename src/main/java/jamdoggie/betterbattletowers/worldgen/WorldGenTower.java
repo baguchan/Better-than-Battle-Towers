@@ -62,12 +62,12 @@ public class WorldGenTower extends WorldFeature
 						break;
 					}
 					int l4 = world.getBlockId(l1 + i3, i2, j2 + i4);
-					if(l4 != 0 && l4 != Block.layerSnow.id && l4 != Block.flowerYellow.id && l4 != Block.flowerRed.id) // TODO: investigate this. The original source accessed blocksList[], and I removed one that I thought was supposed to point towards logs.
+					if(l4 != 0 && l4 != Block.layerSnow.id && l4 != Block.flowerYellow.id && l4 != Block.flowerRed.id && l4 != Block.flowerPurple.id) // TODO: investigate this. The original source accessed blocksList[], and I removed one that I thought was supposed to point towards logs.
 					{
 						flag5 = true;
 					}
 					int l5 = world.getBlockId(l1 + i3, i2 - 1, j2 + i4);
-					if(l5 != Block.grass.id && l5 != Block.sand.id && l5 != Block.stone.id)
+					if(l5 != Block.grass.id && l5 != Block.grassRetro.id && l5 != Block.sand.id && l5 != Block.stone.id && l5 != Block.granite.id && l5 != Block.dirtScorched.id && l5 != Block.dirtScorchedRich.id &&  l5 != Block.grassScorched.id && l5 != Block.mudBaked.id && l5 != Block.blockSnow.id)
 					{
 						flag5 = true;
 					}
@@ -102,7 +102,7 @@ public class WorldGenTower extends WorldFeature
 		boolean flag3 = false;
 		boolean flag4 = false;
 		int k2 = i1 - 6;
-		int l2 = random.nextInt(3);
+		int l2 = random.nextInt(16);
 
 		currentFloor = 1;
 		field_22237_field_20341_topFloor = 0;
@@ -673,6 +673,68 @@ public class WorldGenTower extends WorldFeature
 			{
 				return Block.cobbleStoneMossy.id;
 			}
+		}
+		if(i == 2)
+		{
+			return Block.brickStone.id;
+		}
+		if(i == 3)
+		{
+			return Block.brickStonePolished.id;
+		}
+		if(i == 4)
+		{
+			if(random.nextInt(3) == 0)
+			{
+				return Block.brickStonePolished.id;
+			} else
+			{
+				return Block.brickStonePolishedMossy.id;
+			}
+		}
+		if(i == 5)
+		{
+			return Block.brickStonePolishedMossy.id;
+		}
+		if(i == 6)
+		{
+			return Block.cobbleBasalt.id;
+		}
+		if(i == 7)
+		{
+			return Block.brickBasalt.id;
+		}
+		if(i == 8)
+		{
+			return Block.cobbleLimestone.id;
+		}
+		if(i == 9)
+		{
+			return Block.brickLimestone.id;
+		}
+		if(i == 10)
+		{
+			return Block.cobbleGranite.id;
+		}
+		if(i == 11)
+		{
+			return Block.brickGranite.id;
+		}
+		if(i == 12)
+		{
+			return Block.cobblePermafrost.id;
+		}
+		if(i == 13)
+		{
+			return Block.brickPermafrost.id;
+		}
+		if(i == 14)
+		{
+			return Block.sandstone.id;
+		}
+		if(i == 15)
+		{
+			return Block.brickSandstone.id;
 		} else
 		{
 			return Block.cobbleStoneMossy.id;
