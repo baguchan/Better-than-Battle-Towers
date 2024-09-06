@@ -355,7 +355,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Block.tnt, random.nextInt(3) + 2);
+				return new ItemStack(Item.toolSwordDiamond, 1);
 			} else
 			{
 				return null;
