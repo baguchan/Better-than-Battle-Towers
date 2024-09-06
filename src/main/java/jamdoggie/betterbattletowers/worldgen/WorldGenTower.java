@@ -355,7 +355,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.toolSwordDiamond, 1);
+				return new ItemStack(Block.blockGold, random.nextInt(2) + 1);
 			} else
 			{
 				return null;
@@ -470,7 +470,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.armorBootsLeather, 1);
+				return new ItemStack(Item.ingotIron, random.nextInt(2) + 1);
 			} else
 			{
 				return null;
@@ -493,7 +493,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.armorHelmetLeather, 1);
+				return new ItemStack(Item.ingotGold, random.nextInt(2) + 1);
 			} else
 			{
 				return null;
@@ -516,7 +516,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.armorLeggingsLeather, 1);
+				return new ItemStack(Item.oreRawIron, random.nextInt(3) + 2);
 			} else
 			{
 				return null;
@@ -539,7 +539,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.armorChestplateLeather, 1);
+				return new ItemStack(Item.oreRawGold, random.nextInt(3) + 2);
 			} else
 			{
 				return null;
