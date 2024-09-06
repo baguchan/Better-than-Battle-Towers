@@ -393,7 +393,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.toolPickaxeWood, 1);
+				return new ItemStack(Item.stick, 1);
 			}
 			if(j == 2)
 			{
@@ -416,7 +416,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.foodBread, random.nextInt(3));
+				return new ItemStack(Item.foodBread, random.nextInt(3) + 2);
 			}
 			if(j == 2)
 			{
@@ -439,7 +439,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.toolSwordStone, 1);
+				return new ItemStack(Block.cobbleStone, random.nextInt(3) + 2);
 			}
 			if(j == 2)
 			{
@@ -470,7 +470,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.armorBootsChainmail, 1);
+				return new ItemStack(Item.armorBootsLeather, 1);
 			} else
 			{
 				return null;
@@ -485,7 +485,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.toolFirestriker, 1);
+				return new ItemStack(Item.flint, random.nextInt(3) + 2);
 			}
 			if(j == 2)
 			{
@@ -493,7 +493,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.armorHelmetChainmail, 1);
+				return new ItemStack(Item.armorHelmetLeather, 1);
 			} else
 			{
 				return null;
@@ -516,7 +516,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.armorLeggingsChainmail, 1);
+				return new ItemStack(Item.armorLeggingsLeather, 1);
 			} else
 			{
 				return null;
@@ -531,7 +531,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.toolHoeDiamond, 1);
+				return new ItemStack(Item.toolHoeIron, 1);
 			}
 			if(j == 2)
 			{
@@ -539,7 +539,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.armorChestplateChainmail, 1);
+				return new ItemStack(Item.armorChestplateLeather, 1);
 			} else
 			{
 				return null;
