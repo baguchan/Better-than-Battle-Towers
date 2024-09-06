@@ -1,5 +1,5 @@
 # About
-A version of the original Battle Towers mod for Better than Adventure.
+A version of the Battle Towers mod for Better than Adventure.
 Tweaks are being made to fit Better Than Adventure.
 # Credit
 ## Original mod developer
