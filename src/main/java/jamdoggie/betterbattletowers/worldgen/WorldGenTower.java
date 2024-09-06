@@ -343,19 +343,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(Item.toolSwordIron, 1);
+				return new ItemStack(Item.ingotGold, random.nextInt(3) + 2);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.toolPickaxeIron, 1);
+				return new ItemStack(Item.ingotIron, random.nextInt(3) + 3);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(Item.toolAxeIron, 1);
+				return new ItemStack(Item.diamond, random.nextInt(2) + 1);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.toolShovelIron, 1);
+				return new ItemStack(Block.tnt, random.nextInt(3) + 2);
 			} else
 			{
 				return null;
@@ -374,7 +374,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 2)
 			{
-				return new ItemStack(Block.cobbleStone, random.nextInt(5) + 4);
+				return new ItemStack(Item.ammoPebble, random.nextInt(5) + 4);
 			}
 			if(j == 3)
 			{
@@ -439,7 +439,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Block.cobbleStone, random.nextInt(3) + 2);
+				return new ItemStack(Item.ammoPebble, random.nextInt(3) + 2);
 			}
 			if(j == 2)
 			{
