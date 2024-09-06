@@ -1,6 +1,6 @@
 # About
-A version of the original Battle Towers mod for Better than Adventure.
-Tweaks are being made to fit Better Than Adventure.
+Port of the Battle Tower mod for Better Than Adventure.
+It's been tweaked to fit BTA.
 # Credit
 ## Original mod developer
 freakstritch
