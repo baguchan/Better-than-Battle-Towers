@@ -1,6 +1,6 @@
 # About
 Port of the Battle Tower mod for Better Than Adventure.
-It's been tweaked to fit this.
+It's been tweaked to fit BTA.
 # Credit
 ## Original mod developer
 freakstritch
