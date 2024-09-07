@@ -1,7 +1,8 @@
 package jamdoggie.betterbattletowers.block;
 
-import jamdoggie.betterbattletowers.IDUtils;
 import jamdoggie.betterbattletowers.BetterBattleTowers;
+import jamdoggie.betterbattletowers.IDUtils;
+import net.minecraft.client.render.block.model.BlockModelChest;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockChest;
 import net.minecraft.core.block.material.Material;
@@ -15,7 +16,12 @@ public class ModBlocks {
 		.setResistance(1200.0f)
 		.setHardness(2.0f)
 		.setBlockSound(BlockSounds.WOOD)
-		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.setTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_PICKAXE)
+		.setBlockModel(block -> new BlockModelChest<>(block, "minecraft:block/chest_planks_oak").withTextures("minecraft:block/chest_planks_oak_top"))
 		.setTextures("betterbattletowers:block/chest_tower")
-		.build(new BlockChest("chest_tower", IDUtils.getCurrBlockId(), Material.stone));
+		.build(new BlockChest("chest_tower", IDUtils.getCurrBlockId(), Material.stone).withDisabledNeighborNotifyOnMetadataChange().withImmovableFlagSet());
+
+	public static void createBlocks() {
+
+	}
 }

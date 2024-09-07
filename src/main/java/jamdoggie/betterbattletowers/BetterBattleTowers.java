@@ -1,5 +1,6 @@
 package jamdoggie.betterbattletowers;
 
+import jamdoggie.betterbattletowers.block.ModBlocks;
 import jamdoggie.betterbattletowers.entity.EntityGolem;
 import jamdoggie.betterbattletowers.entity.render.RenderGolem;
 import jamdoggie.betterbattletowers.worldgen.WorldGenTower;
@@ -33,6 +34,8 @@ public class BetterBattleTowers implements ModInitializer, GameStartEntrypoint, 
 		Properties prop = new Properties();
 		prop.setProperty("towercount", "200");
 		prop.setProperty("rarity", "10");
+		prop.setProperty("starting_block_id", "4000");
+		prop.setProperty("starting_item_id", "35000");
 		prop.setProperty("starting_entity_id", "101");
 		config = new ConfigHandler(BetterBattleTowers.MOD_ID, prop);
 		entityID = config.getInt("starting_entity_id");
@@ -57,13 +60,14 @@ public class BetterBattleTowers implements ModInitializer, GameStartEntrypoint, 
     public void onInitialize() {
         LOGGER.info("Better than Battle Towers initialized.");
 
-		EntityHelper.createEntity(EntityGolem.class, entityID, "TowerGolem", RenderGolem::new);
-
 
     }
 
 	@Override
 	public void beforeGameStart() {
+		ModBlocks.createBlocks();
+
+		EntityHelper.createEntity(EntityGolem.class, entityID, "TowerGolem", RenderGolem::new);
 
 	}
 
