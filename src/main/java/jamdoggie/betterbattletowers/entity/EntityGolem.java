@@ -26,7 +26,7 @@ public class EntityGolem extends EntityMonster
 		texture = "/entity/golem/golemdormant.png";
 		moveSpeed = 0.35F;
 		attackStrength = 8;
-		this.setHealthRaw(150 + 150 * i);
+		this.setHealthRaw(150 + 15 * i);
 		setSize(1.6F, 3.4F);
 		xRot = 0.0F;
 		dormant = 1;
