@@ -11,15 +11,15 @@ import net.minecraft.core.sound.BlockSounds;
 import turniplabs.halplibe.helper.BlockBuilder;
 
 public class ModBlocks {
-	//chest_tower
-	public static final Block chest_tower = new BlockBuilder(BetterBattleTowers.MOD_ID)
+	//ChestTower
+	public static final Block ChestTower = new BlockBuilder(BetterBattleTowers.MOD_ID)
 		.setResistance(1200.0f)
 		.setHardness(2.0f)
 		.setBlockSound(BlockSounds.WOOD)
 		.setTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_PICKAXE)
 		.setBlockModel(block -> new BlockModelChest<>(block, "betterbattletowers:block/chest_tower").withTextures("betterbattletowers:block/chest_tower_top"))
 		.setTextures("betterbattletowers:block/chest_tower")
-		.build(new BlockChest("chest_tower", IDUtils.getCurrBlockId(), Material.stone).withDisabledNeighborNotifyOnMetadataChange().withImmovableFlagSet());
+		.build(new BlockChest("chest.tower", IDUtils.getCurrBlockId(), Material.stone).withDisabledNeighborNotifyOnMetadataChange().withImmovableFlagSet());
 
 	public static void createBlocks() {
 
