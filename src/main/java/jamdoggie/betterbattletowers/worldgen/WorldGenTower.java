@@ -344,19 +344,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(Item.ingotGold, random.nextInt(3) + 2);
+				return new ItemStack(Block.meshGold, random.nextInt(2) + 1);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.ingotIron, random.nextInt(3) + 3);
+				return new ItemStack(Item.ingotGold, random.nextInt(2) + 1);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(Item.diamond, random.nextInt(2) + 1);
+				return new ItemStack(Item.ingotIron, random.nextInt(2) + 2);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Block.blockGold, random.nextInt(2) + 1);
+				return new ItemStack(Item.diamond, random.nextInt(1) + 1);
 			} else
 			{
 				return null;
@@ -367,19 +367,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(Item.stick, random.nextInt(5) + 2);
+				return new ItemStack(Item.stick, random.nextInt(3) + 2);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.seedsWheat, random.nextInt(5) + 2);
+				return new ItemStack(Item.seedsWheat, random.nextInt(2) + 2);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(Item.ammoPebble, random.nextInt(5) + 4);
+				return new ItemStack(Item.ammoPebble, random.nextInt(3) + 3);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Block.sand, random.nextInt(5) + 4);
+				return new ItemStack(Block.sand, random.nextInt(2) + 3);
 			} else
 			{
 				return null;
@@ -390,11 +390,11 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(Item.coal, random.nextInt(3) + 6);
+				return new ItemStack(Item.coal, random.nextInt(2) + 3);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.stick, 1);
+				return new ItemStack(Item.stick, random.nextInt(2) + 3);
 			}
 			if(j == 2)
 			{
@@ -402,7 +402,7 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Block.wool, random.nextInt(3) + 6);
+				return new ItemStack(Block.wool, random.nextInt(3) + 4);
 			} else
 			{
 				return null;
@@ -413,15 +413,15 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(Item.featherChicken, random.nextInt(3) + 6);
+				return new ItemStack(Item.featherChicken, random.nextInt(2) + 6);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.foodBread, random.nextInt(3) + 2);
+				return new ItemStack(Item.foodBread, random.nextInt(1) + 2);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(Block.glass, random.nextInt(3) + 5);
+				return new ItemStack(Block.glass, random.nextInt(2) + 5);
 			}
 			if(j == 3)
 			{
@@ -459,19 +459,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(Block.stairsPlanksOak, random.nextInt(3) + 5);
+				return new ItemStack(Block.stairsPlanksOak, random.nextInt(2) + 3);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.toolBow, 1);
+				return new ItemStack(Block.brickClay, random.nextInt(3) + 5);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(Block.brickClay, random.nextInt(3) + 5);
+				return new ItemStack(Item.ingotIron, random.nextInt(2) + 1);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.ingotIron, random.nextInt(2) + 1);
+				return new ItemStack(Item.rope, random.nextInt(2) + 3);
 			} else
 			{
 				return null;
@@ -482,7 +482,7 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(Block.ladderOak, random.nextInt(3) + 9);
+				return new ItemStack(Block.ladderOak, random.nextInt(3) + 5);
 			}
 			if(j == 1)
 			{
@@ -490,11 +490,11 @@ public class WorldGenTower extends WorldFeature
 			}
 			if(j == 2)
 			{
-				return new ItemStack(Item.dustRedstone, random.nextInt(3) + 5);
+				return new ItemStack(Item.dustRedstone, random.nextInt(1) + 2);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.ingotGold, random.nextInt(2) + 1);
+				return new ItemStack(Item.ingotGold, random.nextInt(1) + 1);
 			} else
 			{
 				return null;
@@ -505,19 +505,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(Block.pumpkinCarvedActive, random.nextInt(3) + 9);
+				return new ItemStack(Block.pumpkinCarvedActive, random.nextInt(3) + 4);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.bucketLava, 1);
+				return new ItemStack(Block.rail, random.nextInt(5) + 6);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(Block.rail, random.nextInt(5) + 9);
+				return new ItemStack(Item.oreRawIron, random.nextInt(2) + 2);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.oreRawIron, random.nextInt(3) + 2);
+				return new ItemStack(Item.bucketLava, 1);
 			} else
 			{
 				return null;
@@ -528,19 +528,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(Block.tnt, random.nextInt(3) + 3);
+				return new ItemStack(Block.tnt, random.nextInt(2) + 3);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(Item.toolHoeIron, 1);
+				return new ItemStack(Block.slate, random.nextInt(3) + 5);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(Block.obsidian, random.nextInt(3) + 6);
+				return new ItemStack(Item.oreRawGold, random.nextInt(1) + 2);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(Item.oreRawGold, random.nextInt(3) + 2);
+				return new ItemStack(Item.chainlink, random.nextInt(3) + 5);
 			} else
 			{
 				return null;
@@ -549,22 +549,22 @@ public class WorldGenTower extends WorldFeature
 
 		if(random.nextInt(4) == 0)
 		{
-			return new ItemStack(Item.diamond, random.nextInt(3) + 3);
+			return new ItemStack(Item.quartz, random.nextInt(2) + 3);
 		}
 
 		if(random.nextInt(4) == 1)
 		{
-			return new ItemStack(Item.ingotIron, random.nextInt(3) + 3);
+			return new ItemStack(Item.olivine, random.nextInt(3) + 3);
 		}
 
 		if(random.nextInt(4) == 2)
 		{
-			return new ItemStack(Item.diamond, random.nextInt(4) + 6);
+			return new ItemStack(Item.dustRedstone, random.nextInt(2) + 2);
 		}
 
 		if(random.nextInt(4) == 3)
 		{
-			return new ItemStack(Item.ingotIron, random.nextInt(4) + 6);
+			return new ItemStack(Block.mesh, random.nextInt(1) + 2);
 		}
 		else
 		{
@@ -586,7 +586,7 @@ public class WorldGenTower extends WorldFeature
 		}
 		if(i == 2)
 		{
-			return "Zombie";
+			return "Spider";
 		}
 		if(i == 3)
 		{
@@ -597,7 +597,7 @@ public class WorldGenTower extends WorldFeature
 			return "Zombie";
 		} else
 		{
-			return "Spider";
+			return "Scorpion";
 		}
 	}
 
