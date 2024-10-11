@@ -67,7 +67,7 @@ public class BetterBattleTowers implements ModInitializer, GameStartEntrypoint, 
 	public void beforeGameStart() {
 		ModBlocks.createBlocks();
 
-		EntityHelper.createEntity(EntityGolem.class, entityID, "TowerGolem", RenderGolem::new);
+		EntityHelper.createEntity(EntityGolem.class, entityID, "TowerGolem", () -> new RenderGolem());
 
 	}
 
