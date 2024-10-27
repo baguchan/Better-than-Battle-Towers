@@ -15,7 +15,7 @@ public class ModBlocks {
 	public static final Block ChestTower = new BlockBuilder(BetterBattleTowers.MOD_ID)
 		.setResistance(1200.0f)
 		.setHardness(2.0f)
-		.setBlockSound(BlockSounds.WOOD)
+		.setBlockSound(BlockSounds.STONE)
 		.setTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_PICKAXE)
 		.setBlockModel(block -> new BlockModelChest<>(block, "betterbattletowers:block/chest_tower").withTextures("betterbattletowers:block/chest_tower_top"))
 		.setTextures("betterbattletowers:block/chest_tower")

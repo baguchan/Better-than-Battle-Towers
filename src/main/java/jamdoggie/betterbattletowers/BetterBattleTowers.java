@@ -36,7 +36,7 @@ public class BetterBattleTowers implements ModInitializer, GameStartEntrypoint, 
 		prop.setProperty("rarity", "10");
 		prop.setProperty("starting_block_id", "6340");
 		prop.setProperty("starting_item_id", "26340");
-		prop.setProperty("starting_entity_id", "101");
+		prop.setProperty("starting_entity_id", "634");
 		config = new ConfigHandler(BetterBattleTowers.MOD_ID, prop);
 		entityID = config.getInt("starting_entity_id");
 		towercount = config.getInt("towercount");
