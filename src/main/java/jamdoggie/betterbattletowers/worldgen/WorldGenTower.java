@@ -345,19 +345,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(LootCofigUtils.lootitemtop_0, random.nextInt(2) + 1);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitemtop_0), random.nextInt(2) + 1);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(LootCofigUtils.lootitemtop_1, random.nextInt(2) + 1);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitemtop_1), random.nextInt(2) + 1);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(LootCofigUtils.lootitemtop_2, random.nextInt(2) + 2);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitemtop_2), random.nextInt(2) + 2);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(LootCofigUtils.lootitemtop_3, random.nextInt(1) + 1);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitemtop_3), random.nextInt(1) + 1);
 			} else
 			{
 				return null;
@@ -368,19 +368,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(Block.getBlock(LootCofigUtils.lootitem1_0), random.nextInt(3) + 2);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem1_0), random.nextInt(3) + 2);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(LootCofigUtils.lootitem1_1, random.nextInt(2) + 2);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem1_1), random.nextInt(2) + 2);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(LootCofigUtils.lootitem1_2, random.nextInt(3) + 3);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem1_2), random.nextInt(3) + 3);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(LootCofigUtils.lootitem1_3, random.nextInt(2) + 3);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem1_3), random.nextInt(2) + 3);
 			} else
 			{
 				return null;
@@ -391,19 +391,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(LootCofigUtils.lootitem2_0, random.nextInt(2) + 3);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem2_0), random.nextInt(2) + 3);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(LootCofigUtils.lootitem2_1, random.nextInt(2) + 3);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem2_1), random.nextInt(2) + 3);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(LootCofigUtils.lootitem2_2, random.nextInt(3) + 4);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem2_2), random.nextInt(3) + 4);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(LootCofigUtils.lootitem2_3, random.nextInt(3) + 4);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem2_3), random.nextInt(3) + 4);
 			} else
 			{
 				return null;
@@ -414,19 +414,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(LootCofigUtils.lootitem3_0, random.nextInt(2) + 6);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem3_0), random.nextInt(2) + 6);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(LootCofigUtils.lootitem3_1, random.nextInt(1) + 2);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem3_1), random.nextInt(1) + 2);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(LootCofigUtils.lootitem3_2, random.nextInt(2) + 5);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem3_2), random.nextInt(2) + 5);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(LootCofigUtils.lootitem3_3, random.nextInt(3) + 3);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem3_3), random.nextInt(3) + 3);
 			} else
 			{
 				return null;
@@ -437,19 +437,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(LootCofigUtils.lootitem4_0, random.nextInt(3) + 2);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem4_0), random.nextInt(3) + 2);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(LootCofigUtils.lootitem4_1, random.nextInt(3) + 2);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem4_1), random.nextInt(3) + 2);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(LootCofigUtils.lootitem4_2, random.nextInt(3) + 5);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem4_2), random.nextInt(3) + 5);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(LootCofigUtils.lootitem4_3, random.nextInt(3) + 3);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem4_3), random.nextInt(3) + 3);
 			} else
 			{
 				return null;
@@ -460,19 +460,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(LootCofigUtils.lootitem5_0, random.nextInt(2) + 3);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem5_0), random.nextInt(2) + 3);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(LootCofigUtils.lootitem5_1, random.nextInt(3) + 5);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem5_1), random.nextInt(3) + 5);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(LootCofigUtils.lootitem5_2, random.nextInt(2) + 1);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem5_2), random.nextInt(2) + 1);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(LootCofigUtils.lootitem5_3, random.nextInt(2) + 3);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem5_3), random.nextInt(2) + 3);
 			} else
 			{
 				return null;
@@ -483,19 +483,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(LootCofigUtils.lootitem6_0, random.nextInt(3) + 5);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem6_0), random.nextInt(3) + 5);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(LootCofigUtils.lootitem6_1, random.nextInt(3) + 2);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem6_1), random.nextInt(3) + 2);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(LootCofigUtils.lootitem6_2, random.nextInt(1) + 2);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem6_2), random.nextInt(1) + 2);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(LootCofigUtils.lootitem6_3, random.nextInt(1) + 1);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem6_3), random.nextInt(1) + 1);
 			} else
 			{
 				return null;
@@ -506,19 +506,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(LootCofigUtils.lootitem7_0, random.nextInt(3) + 4);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem7_0), random.nextInt(3) + 4);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(LootCofigUtils.lootitem7_1, random.nextInt(5) + 6);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem7_1), random.nextInt(5) + 6);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(LootCofigUtils.lootitem7_2, random.nextInt(2) + 2);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem7_2), random.nextInt(2) + 2);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(LootCofigUtils.lootitem7_3, 1);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem7_3), 1);
 			} else
 			{
 				return null;
@@ -529,19 +529,19 @@ public class WorldGenTower extends WorldFeature
 		{
 			if(j == 0)
 			{
-				return new ItemStack(LootCofigUtils.lootitem8_0, random.nextInt(2) + 3);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem8_0), random.nextInt(2) + 3);
 			}
 			if(j == 1)
 			{
-				return new ItemStack(LootCofigUtils.lootitem8_1, random.nextInt(3) + 5);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem8_1), random.nextInt(3) + 5);
 			}
 			if(j == 2)
 			{
-				return new ItemStack(LootCofigUtils.lootitem8_2, random.nextInt(1) + 2);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem8_2), random.nextInt(1) + 2);
 			}
 			if(j == 3)
 			{
-				return new ItemStack(LootCofigUtils.lootitem8_3, random.nextInt(3) + 5);
+				return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem8_3), random.nextInt(3) + 5);
 			} else
 			{
 				return null;
@@ -550,22 +550,22 @@ public class WorldGenTower extends WorldFeature
 
 		if(random.nextInt(4) == 0)
 		{
-			return new ItemStack(LootCofigUtils.lootitem9_0, random.nextInt(2) + 3);
+			return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem9_0), random.nextInt(2) + 3);
 		}
 
 		if(random.nextInt(4) == 1)
 		{
-			return new ItemStack(LootCofigUtils.lootitem9_1, random.nextInt(3) + 3);
+			return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem9_1), random.nextInt(3) + 3);
 		}
 
 		if(random.nextInt(4) == 2)
 		{
-			return new ItemStack(LootCofigUtils.lootitem9_2, random.nextInt(2) + 2);
+			return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem9_2), random.nextInt(2) + 2);
 		}
 
 		if(random.nextInt(4) == 3)
 		{
-			return new ItemStack(LootCofigUtils.lootitem9_3, random.nextInt(1) + 2);
+			return new ItemStack(Block.getBlockByName(LootCofigUtils.lootitem9_3), random.nextInt(1) + 2);
 		}
 		else
 		{
